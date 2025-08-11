@@ -1,0 +1,175 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?q=80&w=1283&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
+}
+
+.booking-bg-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  opacity: 0.10;
+  z-index: -1;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 20px 8%;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#logo {
+  margin-right: 40px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 8px 18px;
+  transition: background .2s;
+  border-radius: 5px;
+}
+
+.nav-list li a.active,
+.nav-list li a:hover {
+  background: #ffb400;
+  color: #222;
+}
+
+.booking-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+}
+
+.booking-card {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 14px;
+  box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+  padding: 40px 30px 30px;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px 0;
+  backdrop-filter: blur(10px);
+}
+
+.booking-card h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.1rem;
+  margin-bottom: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.selected-car {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.selected-car img.car-img {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 9px rgba(0,0,0,0.08);
+}
+
+.booking-card label {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.booking-card input,
+.booking-card select {
+  width: 100%;
+  padding: 7px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  margin-bottom: 13px;
+  margin-top: 2px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.book-btn, .btn {
+  background: #ffb400;
+  color: #222;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.12rem;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 12px 0;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.book-btn:hover, .btn:hover {
+  background: #ff9000;
+  transform: scale(1.03);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.book-btn:active, .btn:active {
+  transform: scale(0.98);
+}
+
+.booking-success {
+  text-align: center;
+  padding: 28px 0 10px 0;
+}
+
+.booking-success h2 {
+  color: #2ecc71;
+  margin-bottom: 10px;
+}
+
+.back-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 22px;
+  background: #222;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.back-btn:hover {
+  background: #ffb400;
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .booking-card {
+    padding: 24px 6px;
+  }
+  .selected-car img.car-img {
+    width: 65px;
+    height: 44px;
+  }
+}

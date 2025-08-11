@@ -1,0 +1,248 @@
+/* (Add this CSS to your existing all cars.css file) */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  color: #222;
+  min-height: 100vh;
+  background: #222;
+  position: relative;
+}
+
+.cars-bg-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: 
+    linear-gradient(120deg, rgba(30, 41, 59, 0.62) 0%, rgba(37, 99, 235, 0.32) 100%),
+    url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(0.82) blur(1.5px);
+  pointer-events: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0%;
+    background: rgb(0, 0, 0, 0.5);
+    color: #fff;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 2px 18px rgba(37, 99, 235, 0.08);
+}
+
+#logo {
+  height: 120px;
+  width: auto;
+  transition: height 0.2s;
+  
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  margin: 0;
+}
+
+.nav-list li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.09em;
+  letter-spacing: 1px;
+  padding: 7px 22px;
+  border-radius: 7px;
+  transition: background 0.2s, color 0.2s;
+  position: relative;
+}
+.nav-list li a.active,
+.nav-list li a:hover {
+  background: #fff;
+  color: #2563eb;
+}
+
+.cars-section {
+  padding: 40px 4% 60px 4%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.cars-section h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.7rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 36px;
+  letter-spacing: 2px;
+  text-shadow: 0 6px 32px rgba(30,41,59,0.38);
+  position: relative;
+  z-index: 2;
+}
+
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 38px;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.car-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px) saturate(1.15);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.2s;
+  animation: fadeIn 0.8s both;
+  border: 1px solid rgba(37, 99, 235, 0.11);
+}
+
+.car-card:hover {
+  transform: translateY(-6px) scale(1.035);
+  box-shadow: 0 16px 46px 0 rgba(37,99,235,0.18);
+  background: rgba(255,255,255,0.23);
+}
+
+.car-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  background: #e5e9f2;
+  filter: brightness(0.92) saturate(1.12);
+}
+
+.car-info {
+  padding: 22px 16px 20px 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.car-info h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.24em;
+  font-weight: 700;
+  color: #2563eb;
+  margin: 0 0 10px 0;
+}
+
+.car-info .company {
+  font-size: 1em;
+  color: #f1f5fa;
+  margin-bottom: 6px;
+  margin-top: 0;
+  letter-spacing: 0.5px;
+}
+
+.car-info .rent {
+  font-size: 1.08em;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.7px;
+  text-shadow: 0 2px 8px rgba(30,41,59,0.32);
+}
+
+.book-btn {
+  margin-top: auto;
+  padding: 12px 0;
+  width: 100%;
+  background: linear-gradient(90deg, #2563eb 60%, #1e293b 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.09em;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.22s, box-shadow 0.18s, color 0.18s;
+  box-shadow: 0 2px 12px rgba(30,41,59,0.10);
+  cursor: pointer;
+  display: block;
+  outline: none;
+  border: 0;
+}
+.book-btn:hover {
+  background: linear-gradient(90deg, #1e293b 60%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 8px 22px rgba(37,99,235,0.22);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(24px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .cars-section { padding: 40px 2% 60px 2%; }
+  .cars-section h1 { font-size: 1.7rem;}
+  .car-card img { height: 120px; }
+}
+@media (max-width: 500px) {
+  .navbar { flex-direction: column; align-items: flex-start; padding: 12px 3%; }
+  .nav-list { gap: 1em; font-size: 0.97em;}
+  .cars-grid { gap: 18px;}
+  .cars-section h1 { font-size: 1.2rem; }
+}
+
+
+
+.filter-section {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  margin: 38px 0 10px 0;
+  z-index: 2;
+  position: relative;
+}
+.filter-container {
+  background: rgba(25, 37, 64, 0.92);
+  padding: 15px 38px;
+  border-radius: 14px;
+  box-shadow: 0 4px 22px rgba(31, 38, 135, 0.12);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.filter-container label {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+  font-weight: 700;
+}
+.filter-container select {
+  padding: 7px 16px;
+  border-radius: 6px;
+  border: 1.5px solid #2563eb55;
+  background: #fff;
+  color: #1e293b;
+  font-size: 1em;
+  margin-right: 8px;
+  margin-left: 5px;
+  outline: none;
+}
+.filter-container select:focus {
+  border-color: #2563eb;
+}
+
+@media (max-width: 900px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 6vw;
+  }
+}

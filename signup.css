@@ -1,0 +1,89 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: url('https://images.unsplash.com/photo-1503736334956-4c8f8e92946d?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-container {
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px 30px 30px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    max-width: 370px;
+    width: 100%;
+}
+
+.signup-form h2 {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    font-size: 32px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+.input-group label {
+    display: block;
+    color: #ccc;
+    margin-bottom: 7px;
+    font-size: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.85);
+    font-size: 16px;
+    box-sizing: border-box;
+    margin-bottom: 3px;
+    transition: background 0.2s;
+}
+
+.input-group input:focus {
+    outline: none;
+    background: #fff;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px 0;
+    background: #e74c3c;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #c0392b;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 15px;
+    color: #bbb;
+}
+
+.login-link a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

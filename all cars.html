@@ -1,0 +1,179 @@
+<!DOCTYPE php>
+<php lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Cars - Car Rental</title>
+  <link rel="stylesheet" href="all cars.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cars-bg-overlay"></div>
+  <nav class="navbar">
+    <img id="logo" src="logo.png" alt="logo" height="160">
+    <ul class="nav-list">
+      <li><a href="dashboard.php">Home</a></li>
+      <li><a href="all cars.html" class="active">All Cars</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.php">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Filter Section -->
+  <section class="filter-section">
+    <div class="filter-container">
+      <label for="company-filter">Company:</label>
+      <select id="company-filter">
+        <option value="all">All</option>
+        <option value="Maruti Suzuki">Maruti Suzuki</option>
+        <option value="Hyundai">Hyundai</option>
+        <option value="Tata">Tata</option>
+        <option value="Mahindra">Mahindra</option>
+        <option value="Honda">Honda</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Kia">Kia</option>
+        <option value="MG">MG</option>
+        <option value="Skoda">Skoda</option>
+        <option value="Renault">Renault</option>
+        <option value="Force Motors">Force Motors</option>
+        <option value="Jeep">Jeep</option>
+      </select>
+      <label for="cost-filter">Cost per hour:</label>
+      <select id="cost-filter">
+        <option value="all">All</option>
+        <option value="low">Below ₹2500</option>
+        <option value="mid">₹2500 - ₹3500</option>
+        <option value="high">Above ₹3500</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="cars-section">
+    <h1>Available Cars for Rent</h1>
+    <div class="cars-grid" id="cars-grid">
+      <!-- Maruti Suzuki Swift -->
+      <div class="car-card" data-company="Maruti Suzuki" data-cost="2500">
+        <img src="maruti suzuki swift.jpg" alt="Maruti Suzuki Swift">
+        <div class="car-info">
+          
+          <h2>Maruti Suzuki Swift</h2>
+          <p class="company">Company: Maruti Suzuki</p>
+          <p class="rent">Rent: ₹2500/hour</p>
+          <a href="book.php?car=swift" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Hyundai i20 -->
+      <div class="car-card" data-company="Hyundai" data-cost="2200">
+        <img src="hyundai i20.jpg" alt="Hyundai i20">
+        <div class="car-info">
+          <h2>Hyundai i20</h2>
+          <p class="company">Company: Hyundai</p>
+          <p class="rent">Rent: ₹2200/hour</p>
+          <a href="book.php?car=i20" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Tata Nexon -->
+      <div class="car-card" data-company="Tata" data-cost="3200">
+        <img src="tata nexon.avif" alt="Tata Nexon">
+        <div class="car-info">
+          <h2>Tata Nexon</h2>
+          <p class="company">Company: Tata</p>
+          <p class="rent">Rent: ₹3200/hour</p>
+          <a href="book.php?car=nexon" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Mahindra XUV300 -->
+      <div class="car-card" data-company="Mahindra" data-cost="3000">
+        <img src="mahindra xuv 300.jpg" alt="Mahindra XUV300">
+        <div class="car-info">
+          <h2>Mahindra XUV300</h2>
+          <p class="company">Company: Mahindra</p>
+          <p class="rent">Rent: ₹3000/hour</p>
+          <a href="book.php?car=xuv300" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Honda City -->
+      <div class="car-card" data-company="Honda" data-cost="3500">
+        <img src="honda city.avif" alt="Honda City">
+        <div class="car-info">
+          <h2>Honda City</h2>
+          <p class="company">Company: Honda</p>
+          <p class="rent">Rent: ₹3500/hour</p>
+          <a href="book.php?car=city" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Toyota Innova -->
+      <div class="car-card" data-company="Toyota" data-cost="4000">
+        <img src="toyota innova.webp" alt="Toyota Innova">
+        <div class="car-info">
+          <h2>Toyota Innova</h2>
+          <p class="company">Company: Toyota</p>
+          <p class="rent">Rent: ₹4000/hour</p>
+          <a href="book.php?car=innova" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Kia Seltos -->
+      <div class="car-card" data-company="Kia" data-cost="3700">
+        <img src="kia saltos.jpg" alt="Kia Seltos">
+        <div class="car-info">
+          <h2>Kia Seltos</h2>
+          <p class="company">Company: Kia</p>
+          <p class="rent">Rent: ₹3700/hour</p>
+          <a href="book.php?car=seltos" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- MG Hector -->
+      <div class="car-card" data-company="MG" data-cost="3800">
+        <img src="mg hector.jpeg" alt="MG Hector">
+        <div class="car-info">
+          <h2>MG Hector</h2>
+          <p class="company">Company: MG</p>
+          <p class="rent">Rent: ₹3800/hour</p>
+          <a href="book.php?car=hector" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Skoda Rapid -->
+      <div class="car-card" data-company="Skoda" data-cost="3400">
+        <img src="skoda rapid.webp" alt="Skoda Rapid">
+        <div class="car-info">
+          <h2>Skoda Rapid</h2>
+          <p class="company">Company: Skoda</p>
+          <p class="rent">Rent: ₹3400/hour</p>
+          <a href="book.php?car=rapid" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Renault Kwid -->
+      <div class="car-card" data-company="Renault" data-cost="2100">
+        <img src="renault kwid.jpeg" alt="Renault Kwid">
+        <div class="car-info">
+          <h2>Renault Kwid</h2>
+          <p class="company">Company: Renault</p>
+          <p class="rent">Rent: ₹2100/hour</p>
+          <a href="book.php?car=kwid" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Force Gurkha -->
+      <div class="car-card" data-company="Force Motors" data-cost="4100">
+        <img src="force gurkha.avif" alt="Force Gurkha">
+        <div class="car-info">
+          <h2>Force Gurkha</h2>
+          <p class="company">Company: Force Motors</p>
+          <p class="rent">Rent: ₹4100/hour</p>
+          <a href="book.php?car=gurkha" class="book-btn">Book Now</a>
+        </div>
+      </div>
+      <!-- Jeep Compass -->
+      <div class="car-card" data-company="Jeep" data-cost="3900">
+        <img src="jeep campus.jpg" alt="Jeep Compass">
+        <div class="car-info">
+          <h2>Jeep Compass</h2>
+          <p class="company">Company: Jeep</p>
+          <p class="rent">Rent: ₹3900/hour</p>
+          <a href="book.php?car=compass" class="book-btn">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="all cars.js"></script>
+</body>
+</php>
